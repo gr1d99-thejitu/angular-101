@@ -1,0 +1,13 @@
+<script src="hero-detail.component.ts"></script>
+<div *ngIf="hero">
+  <h2>{{ hero.name }}</h2>
+  <div>id: {{hero.id}}</div>
+  <div>
+    <label for="hero-name">Hero Name: </label>
+    <input id="hero-name" [(ngModel)]="hero.name" placeholder="name" />
+    <button type="button" (click)="save()">Save</button>
+  </div>
+  <div>
+    <button (click)="goBack()" type="button">Go Back</button>
+  </div>
+</div>
